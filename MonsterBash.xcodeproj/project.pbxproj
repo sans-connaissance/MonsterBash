@@ -14,6 +14,18 @@
 		4139134E26ED6E2F00CA41EA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4139134D26ED6E2F00CA41EA /* GameViewController.swift */; };
 		4139135126ED6E2F00CA41EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4139134F26ED6E2F00CA41EA /* Main.storyboard */; };
 		4139135326ED6E3100CA41EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4139135226ED6E3100CA41EA /* Assets.xcassets */; };
+		4139136726ED6F8F00CA41EA /* Latin_Industries.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4139135B26ED6F8E00CA41EA /* Latin_Industries.mp3 */; };
+		4139136826ED6F8F00CA41EA /* defend.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4139135C26ED6F8E00CA41EA /* defend.wav */; };
+		4139136926ED6F8F00CA41EA /* lioncry3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4139135D26ED6F8E00CA41EA /* lioncry3.wav */; };
+		4139136A26ED6F8F00CA41EA /* mass.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4139135E26ED6F8E00CA41EA /* mass.wav */; };
+		4139136B26ED6F8F00CA41EA /* pew.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4139135F26ED6F8E00CA41EA /* pew.wav */; };
+		4139136C26ED6F8F00CA41EA /* attack.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4139136026ED6F8E00CA41EA /* attack.wav */; };
+		4139136D26ED6F8F00CA41EA /* smallHit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4139136126ED6F8F00CA41EA /* smallHit.wav */; };
+		4139136E26ED6F8F00CA41EA /* bigHit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4139136226ED6F8F00CA41EA /* bigHit.wav */; };
+		4139136F26ED6F8F00CA41EA /* boom.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4139136326ED6F8F00CA41EA /* boom.wav */; };
+		4139137026ED6F8F00CA41EA /* lionlaugh4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4139136426ED6F8F00CA41EA /* lionlaugh4.wav */; };
+		4139137126ED6F8F00CA41EA /* pew2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4139136526ED6F8F00CA41EA /* pew2.wav */; };
+		4139137226ED6F8F00CA41EA /* spawn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4139136626ED6F8F00CA41EA /* spawn.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +38,18 @@
 		4139135026ED6E2F00CA41EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4139135226ED6E3100CA41EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4139135426ED6E3100CA41EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4139135B26ED6F8E00CA41EA /* Latin_Industries.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Latin_Industries.mp3; sourceTree = "<group>"; };
+		4139135C26ED6F8E00CA41EA /* defend.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = defend.wav; sourceTree = "<group>"; };
+		4139135D26ED6F8E00CA41EA /* lioncry3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lioncry3.wav; sourceTree = "<group>"; };
+		4139135E26ED6F8E00CA41EA /* mass.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mass.wav; sourceTree = "<group>"; };
+		4139135F26ED6F8E00CA41EA /* pew.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pew.wav; sourceTree = "<group>"; };
+		4139136026ED6F8E00CA41EA /* attack.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = attack.wav; sourceTree = "<group>"; };
+		4139136126ED6F8F00CA41EA /* smallHit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = smallHit.wav; sourceTree = "<group>"; };
+		4139136226ED6F8F00CA41EA /* bigHit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bigHit.wav; sourceTree = "<group>"; };
+		4139136326ED6F8F00CA41EA /* boom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom.wav; sourceTree = "<group>"; };
+		4139136426ED6F8F00CA41EA /* lionlaugh4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lionlaugh4.wav; sourceTree = "<group>"; };
+		4139136526ED6F8F00CA41EA /* pew2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pew2.wav; sourceTree = "<group>"; };
+		4139136626ED6F8F00CA41EA /* spawn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = spawn.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +82,7 @@
 		4139134426ED6E2F00CA41EA /* MonsterBash */ = {
 			isa = PBXGroup;
 			children = (
+				4139135A26ED6F7F00CA41EA /* Sounds */,
 				4139134526ED6E2F00CA41EA /* AppDelegate.swift */,
 				4139134726ED6E2F00CA41EA /* GameScene.sks */,
 				4139134926ED6E2F00CA41EA /* Actions.sks */,
@@ -68,6 +93,25 @@
 				4139135426ED6E3100CA41EA /* Info.plist */,
 			);
 			path = MonsterBash;
+			sourceTree = "<group>";
+		};
+		4139135A26ED6F7F00CA41EA /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				4139136026ED6F8E00CA41EA /* attack.wav */,
+				4139136226ED6F8F00CA41EA /* bigHit.wav */,
+				4139136326ED6F8F00CA41EA /* boom.wav */,
+				4139135C26ED6F8E00CA41EA /* defend.wav */,
+				4139135B26ED6F8E00CA41EA /* Latin_Industries.mp3 */,
+				4139135D26ED6F8E00CA41EA /* lioncry3.wav */,
+				4139136426ED6F8F00CA41EA /* lionlaugh4.wav */,
+				4139135E26ED6F8E00CA41EA /* mass.wav */,
+				4139135F26ED6F8E00CA41EA /* pew.wav */,
+				4139136526ED6F8F00CA41EA /* pew2.wav */,
+				4139136126ED6F8F00CA41EA /* smallHit.wav */,
+				4139136626ED6F8F00CA41EA /* spawn.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,9 +171,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4139137126ED6F8F00CA41EA /* pew2.wav in Resources */,
+				4139136A26ED6F8F00CA41EA /* mass.wav in Resources */,
+				4139136E26ED6F8F00CA41EA /* bigHit.wav in Resources */,
+				4139136926ED6F8F00CA41EA /* lioncry3.wav in Resources */,
+				4139136D26ED6F8F00CA41EA /* smallHit.wav in Resources */,
 				4139135126ED6E2F00CA41EA /* Main.storyboard in Resources */,
 				4139134826ED6E2F00CA41EA /* GameScene.sks in Resources */,
+				4139136826ED6F8F00CA41EA /* defend.wav in Resources */,
 				4139135326ED6E3100CA41EA /* Assets.xcassets in Resources */,
+				4139136B26ED6F8F00CA41EA /* pew.wav in Resources */,
+				4139137026ED6F8F00CA41EA /* lionlaugh4.wav in Resources */,
+				4139136726ED6F8F00CA41EA /* Latin_Industries.mp3 in Resources */,
+				4139136C26ED6F8F00CA41EA /* attack.wav in Resources */,
+				4139136F26ED6F8F00CA41EA /* boom.wav in Resources */,
+				4139137226ED6F8F00CA41EA /* spawn.wav in Resources */,
 				4139134A26ED6E2F00CA41EA /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
