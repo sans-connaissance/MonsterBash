@@ -26,6 +26,10 @@
 		4139137026ED6F8F00CA41EA /* lionlaugh4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4139136426ED6F8F00CA41EA /* lionlaugh4.wav */; };
 		4139137126ED6F8F00CA41EA /* pew2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4139136526ED6F8F00CA41EA /* pew2.wav */; };
 		4139137226ED6F8F00CA41EA /* spawn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4139136626ED6F8F00CA41EA /* spawn.wav */; };
+		4139137526ED6FCE00CA41EA /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4139137426ED6FCE00CA41EA /* ButtonNode.swift */; };
+		4139137726ED700600CA41EA /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4139137626ED700500CA41EA /* SoundManager.swift */; };
+		4139137926ED702600CA41EA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4139137826ED702600CA41EA /* Constants.swift */; };
+		4139137B26ED718500CA41EA /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4139137A26ED718500CA41EA /* MyUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		4139136426ED6F8F00CA41EA /* lionlaugh4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lionlaugh4.wav; sourceTree = "<group>"; };
 		4139136526ED6F8F00CA41EA /* pew2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pew2.wav; sourceTree = "<group>"; };
 		4139136626ED6F8F00CA41EA /* spawn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = spawn.wav; sourceTree = "<group>"; };
+		4139137426ED6FCE00CA41EA /* ButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
+		4139137626ED700500CA41EA /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		4139137826ED702600CA41EA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4139137A26ED718500CA41EA /* MyUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,7 @@
 		4139134426ED6E2F00CA41EA /* MonsterBash */ = {
 			isa = PBXGroup;
 			children = (
+				4139137326ED6FC400CA41EA /* Helpers */,
 				4139135A26ED6F7F00CA41EA /* Sounds */,
 				4139134526ED6E2F00CA41EA /* AppDelegate.swift */,
 				4139134726ED6E2F00CA41EA /* GameScene.sks */,
@@ -112,6 +121,17 @@
 				4139136626ED6F8F00CA41EA /* spawn.wav */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		4139137326ED6FC400CA41EA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4139137426ED6FCE00CA41EA /* ButtonNode.swift */,
+				4139137626ED700500CA41EA /* SoundManager.swift */,
+				4139137A26ED718500CA41EA /* MyUtils.swift */,
+				4139137826ED702600CA41EA /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,8 +218,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4139134C26ED6E2F00CA41EA /* GameScene.swift in Sources */,
+				4139137526ED6FCE00CA41EA /* ButtonNode.swift in Sources */,
 				4139134E26ED6E2F00CA41EA /* GameViewController.swift in Sources */,
 				4139134626ED6E2F00CA41EA /* AppDelegate.swift in Sources */,
+				4139137726ED700600CA41EA /* SoundManager.swift in Sources */,
+				4139137B26ED718500CA41EA /* MyUtils.swift in Sources */,
+				4139137926ED702600CA41EA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
