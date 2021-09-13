@@ -14,6 +14,7 @@ class GameScene: SKScene {
     
     // Graphical elements
     var background: SKSpriteNode!
+    var quirkButton: ButtonNode!
     
     override func didMove(to view: SKView) {
         
@@ -26,6 +27,11 @@ class GameScene: SKScene {
         
         // bacground image
         background = (self.childNode(withName: "background") as! SKSpriteNode)
+        
+        quirkButton = ButtonNode(iconName: "quirk1", text: "10", onButtonPress: quirkPressed)
+        quirkButton.position = CGPoint(x: -364, y: -275)
+        addChild(quirkButton)
+        
         
         
     }
