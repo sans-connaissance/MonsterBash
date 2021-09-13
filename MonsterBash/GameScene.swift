@@ -14,7 +14,16 @@ class GameScene: SKScene {
     
     // Graphical elements
     var background: SKSpriteNode!
+    var coin1: SKSpriteNode!
+    var coin2: SKSpriteNode!
+    
+    var coin1Label: SKLabelNode!
+    var coin2Label: SKLabelNode!
+    
+    // Buttons
     var quirkButton: ButtonNode!
+    var zapButton: ButtonNode!
+    var munchButton: ButtonNode!
     
     override func didMove(to view: SKView) {
         
@@ -28,11 +37,25 @@ class GameScene: SKScene {
         // bacground image
         background = (self.childNode(withName: "background") as! SKSpriteNode)
         
+        coin1 = (self.childNode(withName: "coin1") as! SKSpriteNode)
+        coin1Label = (self.childNode(withName: "coin1Label") as! SKLabelNode)
+        
+        coin2 = (self.childNode(withName: "coin2") as! SKSpriteNode)
+        coin2Label = (self.childNode(withName: "coin2Label") as! SKLabelNode)
+        
         quirkButton = ButtonNode(iconName: "quirk1", text: "10", onButtonPress: quirkPressed)
-        quirkButton.position = CGPoint(x: -364, y: -275)
+        quirkButton.position = CGPoint(x: -350, y: -275)
         addChild(quirkButton)
         
+        // Add zap button
+        zapButton = ButtonNode(iconName: "zap1", text: "25", onButtonPress: zapPressed)
+        zapButton.position = CGPoint(x: 0, y: -275)
+        addChild(zapButton)
         
+        // Add munch button
+        munchButton = ButtonNode(iconName: "munch1", text: "50", onButtonPress: munchPressed)
+        munchButton.position = CGPoint(x: 350, y: -275)
+        addChild(munchButton)
         
     }
     
