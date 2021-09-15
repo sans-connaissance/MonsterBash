@@ -25,6 +25,8 @@ class GameScene: SKScene {
     var zapButton: ButtonNode!
     var munchButton: ButtonNode!
     
+    var entityManager: EntityManager!
+    
     override func didMove(to view: SKView) {
         
         print("scene size: \(size)")
@@ -56,6 +58,23 @@ class GameScene: SKScene {
         munchButton = ButtonNode(iconName: "munch1", text: "50", onButtonPress: munchPressed)
         munchButton.position = CGPoint(x: 350, y: -275)
         addChild(munchButton)
+        
+        
+        // Adding and managing entities
+        entityManager = EntityManager(scene: self)
+        
+        let humanCastle = Castle(imageName: "castle1_atk")
+        if let spriteComponent = humanCastle.component(ofType: SpriteComponent.self) {
+            spriteComponent.node.position = CGPoint(x: -500, y: 50)
+        }
+        entityManager.add(humanCastle)
+        
+        
+        let aiCastle = Castle(imageName: "castle2_atk")
+        if let spriteComponent = aiCastle.component(ofType: SpriteComponent.self) {
+            spriteComponent.node.position = CGPoint(x: 500, y: 50)
+        }
+        entityManager.add(aiCastle)
         
     }
     
