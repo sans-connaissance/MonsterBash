@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4102237626F1791200919B10 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4102237526F1791200919B10 /* SpriteComponent.swift */; };
 		4102237926F17A5E00919B10 /* Castle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4102237826F17A5E00919B10 /* Castle.swift */; };
+		4102237B26F17D0300919B10 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4102237A26F17D0300919B10 /* EntityManager.swift */; };
 		4139134626ED6E2F00CA41EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4139134526ED6E2F00CA41EA /* AppDelegate.swift */; };
 		4139134826ED6E2F00CA41EA /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4139134726ED6E2F00CA41EA /* GameScene.sks */; };
 		4139134A26ED6E2F00CA41EA /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4139134926ED6E2F00CA41EA /* Actions.sks */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		4102237526F1791200919B10 /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		4102237826F17A5E00919B10 /* Castle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Castle.swift; sourceTree = "<group>"; };
+		4102237A26F17D0300919B10 /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		4139134226ED6E2F00CA41EA /* MonsterBash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonsterBash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4139134526ED6E2F00CA41EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4139134726ED6E2F00CA41EA /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				4102237826F17A5E00919B10 /* Castle.swift */,
+				4102237A26F17D0300919B10 /* EntityManager.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4102237B26F17D0300919B10 /* EntityManager.swift in Sources */,
 				4139134C26ED6E2F00CA41EA /* GameScene.swift in Sources */,
 				4139137526ED6FCE00CA41EA /* ButtonNode.swift in Sources */,
 				4102237626F1791200919B10 /* SpriteComponent.swift in Sources */,
