@@ -137,6 +137,19 @@ class GameScene: SKScene {
             return
         }
         
+        let deltaTime = currentTime - lastUpdateTimeInterval
+        lastUpdateTimeInterval = currentTime
+        
+        entityManager.update(deltaTime)
+        
+        if let human = entityManager.castle(for: .team1),
+           let humanCastle = human.component(ofType: CastleComponent.self) {
+            coin1Label.text = "\(humanCastle.coins)"
+        }
+        if let ai = entityManager.castle(for: .team2),
+           let aiCastle = ai.component(ofType: CastleComponent.self) {
+            coin2Label.text = "\(aiCastle.coins)"
+        }
     }
 }
 
