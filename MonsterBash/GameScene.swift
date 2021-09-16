@@ -63,14 +63,14 @@ class GameScene: SKScene {
         // Adding and managing entities
         entityManager = EntityManager(scene: self)
         
-        let humanCastle = Castle(imageName: "castle1_atk")
+        let humanCastle = Castle(imageName: "castle1_atk", team: .team1)
         if let spriteComponent = humanCastle.component(ofType: SpriteComponent.self) {
             spriteComponent.node.position = CGPoint(x: -500, y: 50)
         }
         entityManager.add(humanCastle)
         
         
-        let aiCastle = Castle(imageName: "castle2_atk")
+        let aiCastle = Castle(imageName: "castle2_atk", team: .team2)
         if let spriteComponent = aiCastle.component(ofType: SpriteComponent.self) {
             spriteComponent.node.position = CGPoint(x: 500, y: 50)
         }
