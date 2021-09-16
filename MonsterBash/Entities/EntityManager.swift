@@ -70,4 +70,28 @@ class EntityManager {
       return nil
     }
     
+    func spawnQuirk(team: Team) {
+ 
+      guard let teamEntity = castle(for: team),
+        let teamCastleComponent = teamEntity.component(ofType: CastleComponent.self),
+        let teamSpriteComponent = teamEntity.component(ofType: SpriteComponent.self) else {
+          return
+      }
+
+
+      if teamCastleComponent.coins < costQuirk {
+        return
+      }
+      teamCastleComponent.coins -= costQuirk
+      scene.run(SoundManager.sharedInstance.soundSpawn)
+
+
+      let monster = Quirk(team: team)
+      if let spriteComponent = monster.component(ofType: SpriteComponent.self) {
+        spriteComponent.node.position = CGPoint(x: teamSpriteComponent.node.position.x, y: CGFloat.random(min: 50, max: 500))
+        spriteComponent.node.zPosition = 2
+      }
+      add(monster)
+    }
+    
 }
