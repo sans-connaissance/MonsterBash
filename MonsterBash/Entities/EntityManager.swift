@@ -15,8 +15,9 @@ class EntityManager {
     let scene: SKScene
     
     lazy var componentSystems: [GKComponentSystem] = {
-      let castleSystem = GKComponentSystem(componentClass: CastleComponent.self)
-      return [castleSystem]
+        let castleSystem = GKComponentSystem(componentClass: CastleComponent.self)
+        let moveSystem = GKComponentSystem(componentClass: MoveComponent.self)
+        return [castleSystem, moveSystem]
     }()
     
     var toRemove = Set<GKEntity>()
@@ -32,7 +33,7 @@ class EntityManager {
             scene.addChild(spriteNode)
             
             for componentSystem in componentSystems {
-              componentSystem.addComponent(foundIn: entity)
+                componentSystem.addComponent(foundIn: entity)
             }
         }
     }
@@ -46,52 +47,74 @@ class EntityManager {
     }
     
     func update(_ deltaTime: CFTimeInterval) {
-      for componentSystem in componentSystems {
-        componentSystem.update(deltaTime: deltaTime)
-      }
-
-      for currentRemove in toRemove {
         for componentSystem in componentSystems {
-          componentSystem.removeComponent(foundIn: currentRemove)
+            componentSystem.update(deltaTime: deltaTime)
         }
-      }
-      toRemove.removeAll()
+        
+        for currentRemove in toRemove {
+            for componentSystem in componentSystems {
+                componentSystem.removeComponent(foundIn: currentRemove)
+            }
+        }
+        toRemove.removeAll()
     }
     
     func castle(for team: Team) -> GKEntity? {
-      for entity in entities {
-        if let teamComponent = entity.component(ofType: TeamComponent.self),
-          let _ = entity.component(ofType: CastleComponent.self) {
-          if teamComponent.team == team {
-            return entity
-          }
+        for entity in entities {
+            if let teamComponent = entity.component(ofType: TeamComponent.self),
+               let _ = entity.component(ofType: CastleComponent.self) {
+                if teamComponent.team == team {
+                    return entity
+                }
+            }
         }
-      }
-      return nil
+        return nil
     }
     
     func spawnQuirk(team: Team) {
- 
-      guard let teamEntity = castle(for: team),
-        let teamCastleComponent = teamEntity.component(ofType: CastleComponent.self),
-        let teamSpriteComponent = teamEntity.component(ofType: SpriteComponent.self) else {
-          return
-      }
-
-
-      if teamCastleComponent.coins < costQuirk {
-        return
-      }
-      teamCastleComponent.coins -= costQuirk
-      scene.run(SoundManager.sharedInstance.soundSpawn)
-
-
-      let monster = Quirk(team: team)
-      if let spriteComponent = monster.component(ofType: SpriteComponent.self) {
-        spriteComponent.node.position = CGPoint(x: teamSpriteComponent.node.position.x, y: CGFloat.random(min: 50, max: 500))
-        spriteComponent.node.zPosition = 2
-      }
-      add(monster)
+        
+        guard let teamEntity = castle(for: team),
+              let teamCastleComponent = teamEntity.component(ofType: CastleComponent.self),
+              let teamSpriteComponent = teamEntity.component(ofType: SpriteComponent.self) else {
+            return
+        }
+        
+        
+        if teamCastleComponent.coins < costQuirk {
+            return
+        }
+        teamCastleComponent.coins -= costQuirk
+        scene.run(SoundManager.sharedInstance.soundSpawn)
+        
+        
+        let monster = Quirk(team: team, entityManager: self)
+        if let spriteComponent = monster.component(ofType: SpriteComponent.self) {
+            spriteComponent.node.position = CGPoint(x: teamSpriteComponent.node.position.x, y: CGFloat.random(min: 50, max: 500))
+            spriteComponent.node.zPosition = 2
+        }
+        add(monster)
+    }
+    
+    func entities(for team: Team) -> [GKEntity] {
+        return entities.compactMap{ entity in
+            if let teamComponent = entity.component(ofType: TeamComponent.self) {
+                if teamComponent.team == team {
+                    return entity
+                }
+            }
+            return nil
+        }
+    }
+    
+    func moveComponents(for team: Team) -> [MoveComponent] {
+        let entitiesToMove = entities(for: team)
+        var moveComponents = [MoveComponent]()
+        for entity in entitiesToMove {
+            if let moveComponent = entity.component(ofType: MoveComponent.self) {
+                moveComponents.append(moveComponent)
+            }
+        }
+        return moveComponents
     }
     
 }
